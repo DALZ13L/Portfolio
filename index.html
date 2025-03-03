@@ -1,0 +1,59 @@
+ <!DOCTYPE HTML>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+<h1 id="title">Sushi Preferences</h1>
+  <p id="description">Exploring eating preferences among sushi lovers</p>
+<form id="survey-form">
+  <fieldset>
+  <h2>Basic Information</h2>
+    <div><label id="name-label">Name:</label> <input type="text" id="name" placeholder="Enter your full name" required></input></div>
+    <div><label id="email-label">Email:</label> <input type="email" id="email" placeholder="Enter your email"required></input><label></label></div>
+    <div><label id="number-label">Age:</label> <input type="number" id="number" min="5" max="120" pattern="[0-9]" placeholder="0 0 0"></input><label ></label></div>
+    <div><label id="label-select">Gender:</label> <select id="dropdown">       <option value="1">Male</option>
+      <option value="2">Female</option>
+      <option value="3">Other</option></select></div>
+      </fieldset>
+  <fieldset>
+    <h2>How often do you eat sushi?</h2>
+      <div><label id="radio">More than once a week:</label> <input type="radio" id="radio1" name="radio" value="1"></input></div>
+      <div><label id="radio" >Once a week:</label> <input type="radio" id="radio2" name="radio" value="2"></input></div>
+      <div><label id="radio">2-3 times per month:</label> <input type="radio" id="radio3" name="radio" value="3"></input></div>
+      <div><label id="radio">Once a month:</label> <input type="radio" id="radio4" name="radio" value="4"></input></div>
+      <div><label id="radio">Less frequently:</label> <input type="radio" id="radio5" name="radio" value="5"></input></div>
+    </fieldset>
+  <fieldset>
+  <h2>How many plates do you order in a typical sitting?</h2>
+        <div><label id="radio">Under 5:</label> <input type="radio" id="radioa" name="radio"  value="1"></input></div>
+    <div><label id="radio">5-10:</label> <input type="radio" id="radiob" name="radio"  value="2"></input></div>
+    <div><label id="radio">10-15:</label> <input type="radio" id="radioc" name="radio"  value="3"></input></div>
+    <div><label id="radio">15-20:</label> <input type="radio" id="radiod" name="radio"  value="4"></input></div>
+    <div><label id="radio">20 or more:</label> <input type="radio" id="radioe" name="radio"  value="5"></input></div>
+    </fieldset>
+  <fieldset>
+  <h2>Which of the following do you typically order</h2> <h2>(check all that apply)</h2>
+    <divclass="checkbox-group"><input type="checkbox" value="1" id="maguro">Tuna (Maguro)
+    <input type="checkbox" value="2" id="unagi">Unagi (Eel)
+    </div>
+    <div id="fish2"><divclass="checkbox-group">
+    <input type="checkbox" value="6" id="tamago">Tamago (Egg)<input type="checkbox" value="5" id="shrimp">Ebi (Shrimp)<div>
+    <div id="fish3" {margin-top: .8em}><divclass="checkbox-group">
+    <input type="checkbox" value="4" id="salmon">Salmon<input type="checkbox" value="3" id="yellowtail">Yellowtail</div>  
+  </fieldset>
+  <fieldset>
+  <h2>Which style of sushi do you prefer?</h2>
+    <div><label id="radio">Nigiri (open fish on rice):</label> <input type="radio" id="radioup" name="radio"  value="1"></input></div><div><label id="radio">Gunkan (rolled in seaweed):</label> <input type="radio" id="radiodown" name="radio"  value="2"></input></div>
+    </fieldset>
+  <fieldset>
+    <h2>Any other comments?</h2> <textarea></textarea>
+      </fieldset>
+  <fieldset>
+     <input type="submit" id="submit" value="&nbsp;Submit&nbsp;"></input>
+      </fieldset>      
+</form>

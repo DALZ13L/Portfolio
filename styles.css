@@ -1,0 +1,101 @@
+body {background: url(https://miro.medium.com/v2/resize:fit:1366/0*jNT878dAtmOzkw_A.jpg);
+background-size: cover;
+font-family: sans-serif;
+}
+
+h1 {font-family: "Permanent Marker", serif;
+  font-size: 50px;
+  font-style: normal;
+  color:pink;
+  text-shadow: -2px -2px 0 black, 2px -2px black, -2px 2px black, 2px 2px black;
+  text-align: center;
+  letter-spacing: 0.07em
+  }
+
+  p {
+    text-align: center;
+  color:pink;
+  text-shadow: 
+    1.3px 1.3px 2px black,   /* outer bottom-right shadow */
+    -1.3px 1.3px 2px black,  /* outer bottom-left shadow */
+    1.3px -1.3px 2px black,  /* outer top-right shadow */
+    -1.3px -1.3px 2px black;}
+
+fieldset {background-color: pink;
+opacity: 0.8;
+border: 3px solid;
+border-color: black
+box-sizing: border-box;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+text-align: center
+} 
+
+.checkbox-group {
+    display: grid;
+    gap: 5px;
+}
+
+textarea {width:70%;
+height: 7em;
+margin: 0.5em 0em 1em 0em;
+}
+
+input[type="submit"] {height: 2em;
+font-size: 1em;
+margin-top: 1em;
+margin-bottom: .5em;}
+
+input[type="radio"] {margin-bottom: 0.5em}
+
+input[type="text"] {font-size: 1em;
+margin-bottom: .7em;
+width: 153px;}
+
+input[type="email"] {font-size: 1em;
+margin-bottom: .7em;
+width: 127px;
+margin-right: 23px}
+
+input[type="number"] {font-size: 1em;
+margin-bottom: .7em;
+width: 49px;
+margin-right: 89px
+}
+
+select {font-size: 1em;
+margin-bottom: .7em;
+width: auto;
+margin-right: 85px}
+
+p {font-size:1.2em;
+margin-top: -1em;
+margin-bottom: 1.7em}
+
+#radio1 {margin-right: 3.5em;}
+#radio2 {margin-right: -2.03em;}
+#radio3 {margin-right: 1.8em;}
+#radio4 {margin-right: -1.4em;}
+#radio5 {margin-right: -0.8em;
+margin-bottom: .7em;}
+
+#radioa {margin-right: -4.6em;}
+#radiob {margin-right: -6.5em;}
+#radioc {margin-right: -5.8em;}
+#radiod {margin-right: -5.8em;}
+#radioe {margin-right: -3em;margin-bottom: .7em;}
+
+#maguro {margin-left: 1em}
+#unagi {margin-left: 2em;}
+#tamago {margin-left: 1.7em;}
+#shrimp {margin-left: 2.7em;}
+#salmon {margin-left: 0.1em;}
+#yellowtail {margin-left: 6.2em}
+
+#fish2 {margin-top: .5em}
+#fish3 {margin-top: .45em; margin-bottom: .5em;}
+
+#radioup {margin-right: 0em;}
+#radiodown {margin-right: 1.9em;
+  margin-bottom: .7em;}
