@@ -1,0 +1,170 @@
+** start of undefined **
+
+  <!DOCTYPE HTML>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+<h1 id="title">Sushi Preferences</h1>
+  <p id="description">Exploring eating preferences among sushi lovers</p>
+<form id="survey-form">
+  <fieldset>
+  <h2>Basic Information</h2>
+    <div><label id="name-label">Name:</label> <input type="text" id="name" placeholder="Enter your full name" required></input></div>
+    <div><label id="email-label">Email:</label> <input type="email" id="email" placeholder="Enter your email"required></input><label></label></div>
+    <div><label id="number-label">Age:</label> <input type="number" id="number" min="5" max="120" pattern="[0-9]" placeholder="0 0 0"></input><label ></label></div>
+    <div><label id="label-select">Gender:</label> <select id="dropdown">       <option value="1">Male</option>
+      <option value="2">Female</option>
+      <option value="3">Other</option></select></div>
+      </fieldset>
+  <fieldset>
+    <h2>How often do you eat sushi?</h2>
+      <div><label id="radio">More than once a week:</label> <input type="radio" id="radio1" name="radio" value="1"></input></div>
+      <div><label id="radio" >Once a week:</label> <input type="radio" id="radio2" name="radio" value="2"></input></div>
+      <div><label id="radio">2-3 times per month:</label> <input type="radio" id="radio3" name="radio" value="3"></input></div>
+      <div><label id="radio">Once a month:</label> <input type="radio" id="radio4" name="radio" value="4"></input></div>
+      <div><label id="radio">Less frequently:</label> <input type="radio" id="radio5" name="radio" value="5"></input></div>
+    </fieldset>
+  <fieldset>
+  <h2>How many plates do you order in a typical sitting?</h2>
+        <div><label id="radio">Under 5:</label> <input type="radio" id="radioa" name="radio"  value="1"></input></div>
+    <div><label id="radio">5-10:</label> <input type="radio" id="radiob" name="radio"  value="2"></input></div>
+    <div><label id="radio">10-15:</label> <input type="radio" id="radioc" name="radio"  value="3"></input></div>
+    <div><label id="radio">15-20:</label> <input type="radio" id="radiod" name="radio"  value="4"></input></div>
+    <div><label id="radio">20 or more:</label> <input type="radio" id="radioe" name="radio"  value="5"></input></div>
+    </fieldset>
+  <fieldset>
+  <h2>Which of the following do you typically order</h2> <h2>(check all that apply)</h2>
+    <divclass="checkbox-group"><input type="checkbox" value="1" id="maguro">Tuna (Maguro)
+    <input type="checkbox" value="2" id="unagi">Unagi (Eel)
+    </div>
+    <div id="fish2"><divclass="checkbox-group">
+    <input type="checkbox" value="6" id="tamago">Tamago (Egg)<input type="checkbox" value="5" id="shrimp">Ebi (Shrimp)<div>
+    <div id="fish3" {margin-top: .8em}><divclass="checkbox-group">
+    <input type="checkbox" value="4" id="salmon">Salmon<input type="checkbox" value="3" id="yellowtail">Yellowtail</div>  
+  </fieldset>
+  <fieldset>
+  <h2>Which style of sushi do you prefer?</h2>
+    <div><label id="radio">Nigiri (open fish on rice):</label> <input type="radio" id="radioup" name="radio"  value="1"></input></div><div><label id="radio">Gunkan (rolled in seaweed):</label> <input type="radio" id="radiodown" name="radio"  value="2"></input></div>
+    </fieldset>
+  <fieldset>
+    <h2>Any other comments?</h2> <textarea></textarea>
+      </fieldset>
+  <fieldset>
+     <input type="submit" id="submit" value="&nbsp;Submit&nbsp;"></input>
+      </fieldset>      
+</form>
+
+** end of undefined **
+
+** start of undefined **
+
+body {background: url(https://miro.medium.com/v2/resize:fit:1366/0*jNT878dAtmOzkw_A.jpg);
+background-size: cover;
+font-family: sans-serif;
+}
+
+h1 {font-family: "Permanent Marker", serif;
+  font-size: 50px;
+  font-style: normal;
+  color:pink;
+  text-shadow: -2px -2px 0 black, 2px -2px black, -2px 2px black, 2px 2px black;
+  text-align: center;
+  letter-spacing: 0.07em
+  }
+
+  p {
+    text-align: center;
+  color:pink;
+  text-shadow: 
+    1.3px 1.3px 2px black,   /* outer bottom-right shadow */
+    -1.3px 1.3px 2px black,  /* outer bottom-left shadow */
+    1.3px -1.3px 2px black,  /* outer top-right shadow */
+    -1.3px -1.3px 2px black;}
+
+fieldset {background-color: pink;
+opacity: 0.8;
+border: 3px solid;
+border-color: black
+box-sizing: border-box;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+text-align: center
+} 
+
+.checkbox-group {
+    display: grid;
+    gap: 5px;
+}
+
+textarea {width:70%;
+height: 7em;
+margin: 0.5em 0em 1em 0em;
+}
+
+input[type="submit"] {height: 2em;
+font-size: 1em;
+margin-top: 1em;
+margin-bottom: .5em;}
+
+input[type="radio"] {margin-bottom: 0.5em}
+
+input[type="text"] {font-size: 1em;
+margin-bottom: .7em;
+width: 153px;}
+
+input[type="email"] {font-size: 1em;
+margin-bottom: .7em;
+width: 127px;
+margin-right: 23px}
+
+input[type="number"] {font-size: 1em;
+margin-bottom: .7em;
+width: 49px;
+margin-right: 89px
+}
+
+select {font-size: 1em;
+margin-bottom: .7em;
+width: auto;
+margin-right: 85px}
+
+p {font-size:1.2em;
+margin-top: -1em;
+margin-bottom: 1.7em}
+
+#radio1 {margin-right: 3.5em;}
+#radio2 {margin-right: -2.03em;}
+#radio3 {margin-right: 1.8em;}
+#radio4 {margin-right: -1.4em;}
+#radio5 {margin-right: -0.8em;
+margin-bottom: .7em;}
+
+#radioa {margin-right: -4.6em;}
+#radiob {margin-right: -6.5em;}
+#radioc {margin-right: -5.8em;}
+#radiod {margin-right: -5.8em;}
+#radioe {margin-right: -3em;margin-bottom: .7em;}
+
+#maguro {margin-left: 1em}
+#unagi {margin-left: 2em;}
+#tamago {margin-left: 1.7em;}
+#shrimp {margin-left: 2.7em;}
+#salmon {margin-left: 0.1em;}
+#yellowtail {margin-left: 6.2em}
+
+#fish2 {margin-top: .5em}
+#fish3 {margin-top: .45em; margin-bottom: .5em;}
+
+#radioup {margin-right: 0em;}
+#radiodown {margin-right: 1.9em;
+  margin-bottom: .7em;}
+
+** end of undefined **
+
