@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+<title>Setting up VICE64 to run in Attract Mode</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+  <div id="navcontainer">
+  <div id="logo-row">
+    <img src="https://i1.wp.com/insertmorecoins.es/wp-content/uploads/2018/11/attractmodelogo.png?fit=860%2C442&ssl=1" alt="attractlogo" id="attractlogo">
+    <img src="https://i.imgur.com/hqGiyjg.png" alt="Logo" id="nav-logo">
+    <img src="https://c-64.nl/wp-content/uploads/2024/07/vice-logo-commodore-64-c64-zwart-smal.png" alt="vicelogo" id="vicelogo">
+  </div>
+          <h1 id="topic">Setting up VICE64 to run in Attract Mode</h1>
+            <nav id="navbar"><header>&#8203;</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#Before_You_Begin"> Before You Begin</a>
+    <a class="nav-link" href="#Basic_Set_Up">Basic Set Up</a>
+    <a class="nav-link" href="#Booting_Into_Fullscreen">Booting Into Fullscreen</a>
+    <a class="nav-link" href="#Inputting_play_and_load_commands">Inputting Play And Load Commands</a>
+<a class="nav-link" href="#Circumventing_Load_times">
+  <span class="nav-full">Circumventing Load Times</span>
+  <span class="nav-short">Skipping Load Times</span>
+</a>
+    <a class="nav-link" href="#Legal_Disclaimer">Legal Disclaimer</a>
+  </nav></div>
+  <main id="main-doc">
+    <div id="images"><img src="https://assetsio.gnwcdn.com/the-boy-behind-the-biggest-coin-op-conversion-of-the-80s-1570724271708.jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp" alt="outrun" class="normal"><img src="https://i.ytimg.com/vi/bLKE5PlEerk/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CIAC0AWKAgwIABABGHIgOyg1MA8=&rs=AOn4CLDWIcCbyE4_EFSYQ-6vryWArUgqug" alt="dizzy" class="normal"><img src="https://i.imgur.com/cAdn7GQ.png" alt="karate" id="karate"></div>
+   <section class="main-section" id="Introduction">
+        <header><h2>Introduction</h2></header>
+<p>No serious retro-gaming collection is complete without the inclusion of the iconic Commodore 64, and when it comes to emulation of this classic hardware, nothing matches the VICE64 in terms of authenticity, reliability and user-friendliness.</p>
+        <p>Nonetheless attempting to emulate 43 year old hardware on a modern PC setup can present some unique challenges, particularly when trying to boot via a custom UI such as Attract Mode. This guide will take you through the steps of how to do just that.</p>
+      </section>
+
+      <section class="main-section" id="Before_You_Begin">
+        <header><h2>Before You Begin</h2></header>
+        <p>Before you can begin you need to make sure to have the following:</p><ul>
+        <li>Attract Mode</li><li>VICE64</li><li>C64 Roms in the following formats: <code> .d64 .prg .t64 .tap .crt .p00 .g64</code></li></ul>
+        <p>It is a good idea to save all these in an dedicated and organised folder for ease of future access.</p>
+      </section>
+
+      <section class="main-section" id="Basic_Set_Up">
+        <header><h2>Basic Set Up</h2></header><div id="images3">
+        <img src="https://i.imgur.com/ArKvq9U.png" alt="setup" id="setup"><div><p>In order to access and boot your ROMS within Attract Mode you need to build a landing page to house the collection, set up associations between your C64 roms and VICE64 and then point Attract Mode to the exact pathways where it can find the ROMS and the emulator.</p>
+        <p>To do this, open Attract Mode and go to <strong>Emulators &gt; Add Emulator</strong>. Name your new emulator <strong>C64</strong>.</p> <p>In the <strong>Executable</strong> field, enter the full path to the VICE emulator, for example: <code>C:\Emulators\VICE\x64sc.exe</code>. In the <strong>Rom Path</strong> field, enter the folder where your C64 games are stored, such as <code>C:\Roms\C64</code>. Set the <strong>Rom Extensions</strong> to something like <code>d64;prg;t64</code> depending on your file types. Finally, in the <strong>Command Line</strong> field, enter <code>[emulator] "[romfilename]"</code> so Attract Mode knows how to launch each game. Once you’ve saved the settings, use the <strong>Generate Collection/Rom List</strong> option to populate your game list and complete the setup.</p>
+        <p><strong>Note:</strong> The appearance, behavior and theme of your new C64 landing page can be fully customized with logo art, animations, preview videos, music etc, but that falls beyond the scope of this guide.
+      </section>
+
+      <section class="main-section" id="Booting_Into_Fullscreen">
+        <header><h2>Booting Into Fullscreen</h2></header><div id="images6">
+        <img src="https://i.imgur.com/JG2Aqsx.png" alt="fullscreen toggle" id="fullscreen-toggle"></div><p>By default, VICE64 boots into windowed mode, with a hotkey toggle to trigger full screen. This is obviously not ideal when booting through a UI, where you are aiming for a seamless gaming experience.</p><code></code>
+        <p>Whilst there is no native support for default fullscreen boot, there is a way around this in Attract Mode by appending the <code>-fullscreen</code> flag directly at the end of the emulator path. Using our earlier example this would be <code>C:\Emulators\VICE\x64sc.exe -fullscreen</code>.</p><p>This ensures VICE always boots directly into fullscreen when a game is launched through the front end.</p>
+      </section>
+
+      <section class="main-section" id="Inputting_play_and_load_commands">
+        <header><h2>Inputting play and load commands</h2></header><div id="images7">
+        <img src="https://www.c64-wiki.com/images/thumb/8/8a/Datasette_laden.jpg/400px-Datasette_laden.jpg" alt="loadscreen"></div><p>VICE64 is designed with high accuracy in mind, so by default it behaves like a real Commodore 64 — meaning you often have to manually type <code>LOAD</code> and other commands just to start a game. While that's great for authenticity, it's obviously a pain when launching games from a frontend like Attract Mode.</p>
+
+<p>To make things smoother, you can configure VICE to automatically boot straight into the game</p>
+
+<p>To do this, you’ll need to run <code>x64sc.exe</code> manually outside of Attract Mode. Once VICE is open:</p>
+
+<ul>
+  <li>Go to <strong>Settings &gt; Cartridge/IO settings</strong> (or just load a cartridge via <strong>File &gt; Attach cartridge image</strong>).</li>
+  <li>Then go to <strong>Settings &gt; Settings Management</strong>.</li>
+  <li>Enable <strong>Autostart</strong> and disable <strong>Enable True Drive Emulation</strong></li>
+  <li>Finally, go to <strong>Settings &gt; Save Settings</strong> so VICE remembers this behavior for future launches.</li>
+</ul>
+
+<p>This ensures that whenever VICE is launched (even via Attract Mode), it will autoload the cartridge image and start the game without asking you to type any commands.</p>
+
+      </section>
+
+      <section class="main-section" id="Circumventing_Load_times">
+        <header><h2>Circumventing Load times</h2></header><div id="images4">
+        <img src="https://i.ytimg.com/vi/tfNxV87bKgM/hqdefault.jpg" alt="description"><img src="https://csdb.dk/gfx/releases/105000/105193.gif" alt="description"><img src="https://retroarcadia.blog/wp-content/uploads/2023/03/r-type0-230318-142940-1.jpg?w=1024" alt="description"></div><p>Another of the quirks of VICE’s commitment to authenticity is the painfully real load times — often clocking in at ten minutes or more, just like on the original hardware.</p><p> This is great for purists looking to preserve the childhood anticipation of spending ten minutes or more looking at some tantilising pixel art and listening to banging chiptune as you eagerly await the <b>Press Start</b> screen, but not when you just want to jump in quickly from a frontend like Attract Mode.</p>
+
+<p>Luckily, VICE includes a <strong>Warp Mode</strong> feature that speeds up loading by running the emulator at 20x normal speed. However this needs to be activated and deactivated manually during gameplay by pressing <code>Alt + W</code> on the keyboard, and these bindings cannot be changed.</p>
+
+<p>If you want to get around this without resorting to keyboard presses you’ll need to use a tool like <b>AntiMicro</b> or <b>JoyToKey</b> to bind Alt and W  button to a button on your gamepad as an indirect solution.</p>
+
+<p>That way, when you start a game, you can hit the mapped button to blast through loading screens and get to the action faster, all while keeping that vintage C64 feel. Just be sure to remember to toggle off again before beginning gameplay!</p>
+      </section>
+
+      <section class="main-section" id="Legal_Disclaimer">
+        <header><h2>Legal Disclaimer</h2></header>
+<p>Emulator software such as VICE64 should not be used to play illegally downloaded and copyrighted content.</p>
+        <p>This guide is in no way intended to endorse such behavior. Please only play content which is copyright free and / or you have permission from the copyright holder to use.</p><div id="images8"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Commodore_64_logo.png"></div>
+      </section>
+      </main>
+      </body></html>
